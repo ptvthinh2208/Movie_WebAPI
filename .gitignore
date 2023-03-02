@@ -1,0 +1,8 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs
+/Movie Services/Movie Services/obj
+/Movie Services/.vs/Movie Services/FileContentIndex
+/Movie Services/.vs/Movie Services/v17
