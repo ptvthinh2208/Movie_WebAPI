@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32929.385
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Movie Services", "Movie Services\Movie Services.csproj", "{EB383B6D-FC93-43C4-B2C9-161E2B998450}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieService.API", "Movie Services\MovieService.API.csproj", "{EB383B6D-FC93-43C4-B2C9-161E2B998450}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
