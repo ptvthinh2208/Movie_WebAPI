@@ -7,3 +7,6 @@
 /Movie Services/.vs/Movie Services/FileContentIndex
 /Movie Services/.vs/Movie Services/v17
 *.v2
+/Movie Services/MovieService.Domain/obj
+/Movie Services/.vs/ProjectEvaluation
+/Movie Services/MovieService.Infrastructure/obj
