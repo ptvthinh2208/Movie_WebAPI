@@ -10,3 +10,6 @@
 /Movie Services/MovieService.Domain/obj
 /Movie Services/.vs/ProjectEvaluation
 /Movie Services/MovieService.Infrastructure/obj
+/Movie Services/Movie Services/bin/Debug/net6.0
+/Movie Services/MovieService.Domain/bin/Debug/net6.0
+/Movie Services/MovieService.Infrastructure/bin/Debug/net6.0

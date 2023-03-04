@@ -23,7 +23,10 @@ namespace MovieService.Infrastructure.EF
             : base(options)
         {
         }
-
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder.UseSqlServer("Server=ADMIN;Database=MovieService;User ID=sa;Password=sa@123;MultipleActiveResultSets=True;TrustServerCertificate=True");
+        }
         public virtual DbSet<Actor> Actor { get; set; }
         public virtual DbSet<Country> Country { get; set; }
         public virtual DbSet<Director> Director { get; set; }
