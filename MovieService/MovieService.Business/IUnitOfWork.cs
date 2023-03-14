@@ -2,6 +2,7 @@
 using MovieService.Domain.Actor;
 using MovieService.Domain.Country;
 using MovieService.Domain.Director;
+using MovieService.Domain.Genre;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,6 +16,7 @@ namespace MovieService.Business
         IPropertyRepository<Actor> ActorRepository { get; }
         IPropertyRepository<Country> CountryRepository { get; }
         IPropertyRepository<Director> DirectorRepository { get; }
+        IPropertyRepository<Genre> GenreRepository { get; }
         void Save();
     }
 }
