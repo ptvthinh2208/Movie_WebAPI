@@ -58,17 +58,14 @@ namespace MovieService.Business.BusinessUseCases
         {
             try
             {
-                if (typeof(T) == typeof(Genre))
+                var existEntity = await _propertyRepository.GetByName(value);
+                if (existEntity != null)
                 {
-                    var existSysId = await _propertyRepository.Get(value);
-                    if (existSysId != null)
+                    return new ReturnResult()
                     {
-                        return new ReturnResult()
-                        {
-                            IsSuccess = false,
-                            Message = "Duplicate SysId"
-                        };
-                    }
+                        IsSuccess = false,
+                        Message = "Duplicate " + typeof(T).Name
+                    };
                 }
                 T entity = CreateEntity(value);
                 await _propertyRepository.Create(entity);
@@ -93,14 +90,6 @@ namespace MovieService.Business.BusinessUseCases
         {
             try
             {
-                if (typeof(T) == typeof(Genre))
-                {
-                    return new ReturnResult()
-                    {
-                        IsSuccess = false,
-                        Message = "Can't update Genre"
-                    };
-                }
                 var existEntity = await _propertyRepository.Get(id);
                 if (existEntity == null)
                 {
@@ -109,6 +98,18 @@ namespace MovieService.Business.BusinessUseCases
                         IsSuccess = false,
                         Message = typeof(T).Name + " doesn't exist"
                     };
+                }
+                else
+                {
+                    var existValue = await _propertyRepository.GetByName(value);
+                    if (existValue != null)
+                    {
+                        return new ReturnResult()
+                        {
+                            IsSuccess = false,
+                            Message = "Can't update, because " + existValue + "alreay exitst!"
+                        };
+                    }
                 }
                 T entity = UpdateEntity(existEntity, value);
                 _propertyRepository.Update(entity);
@@ -134,22 +135,17 @@ namespace MovieService.Business.BusinessUseCases
             try
             {
                 T existEntity = null;
-                if (typeof(T) == typeof(Genre))
+
+                if (Int32.TryParse(strId, out var id))
                 {
-                    existEntity = await _propertyRepository.Get(strId);
-                }
-                else
-                {
-                    if (Int32.TryParse(strId, out var id))
-                    {
-                        existEntity = await _propertyRepository.Get(id);
-                    }
+                    existEntity = await _propertyRepository.Get(id);
                 }
                 if (existEntity == null)
                 {
                     return new ReturnResult()
                     {
-                        IsSuccess = false
+                        IsSuccess = false,
+                        Message = "Value doesn't exist"
                     };
                 }
                 _propertyRepository.Delete(existEntity);
