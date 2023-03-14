@@ -17,7 +17,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
+    <ProjectReference Include="..\MovieService.Business\MovieService.Business.csproj" />
+    <ProjectReference Include="..\MovieService.Domain\MovieService.Domain.csproj" />
+    <ProjectReference Include="..\MovieService.Infrastructure\MovieService.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>
