@@ -1,13 +1,20 @@
+using Microsoft.EntityFrameworkCore;
 using MovieService.Business;
 using MovieService.Business.BusinessUseCases;
 using MovieService.Business.DTOs;
 using MovieService.Domain;
 using MovieService.Domain.Actor;
 using MovieService.Infrastructure;
+using MovieService.Infrastructure.EF;
 using MovieService.Infrastructure.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
+var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+builder.Services.AddDbContext<MovieContext>(options =>
+{
+    options.UseSqlServer(builder.Configuration.GetConnectionString(connectionString));
 
+});
 // Add services to the container.
 
 builder.Services.AddTransient<IUnitOfWork, UnitOfWork>();
