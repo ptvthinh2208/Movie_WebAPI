@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MovieService.Infrastructure.Repositories;
+using MovieService.Domain.Country;
 
 namespace MovieService.Infrastructure
 {
@@ -19,8 +20,11 @@ namespace MovieService.Infrastructure
             _movieContext = movieContext;
         }
         private IPropertyRepository<Actor> _actorRepository;
+        private IPropertyRepository<Country> _countryRepository;
+
 
         public IPropertyRepository<Actor> ActorRepository => _actorRepository = new ActorRepository(_movieContext);
+        public IPropertyRepository<Country> CountryRepository => _countryRepository = new CountryRepository(_movieContext);
         public void Save()
         {
             _movieContext.SaveChanges();
