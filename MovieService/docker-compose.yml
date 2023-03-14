@@ -1,0 +1,28 @@
+version: '3.4'
+
+services:
+  movieDB:
+    container_name: Movie_DB
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    build:
+      context: .
+      dockerfile: MovieService/Database_Bak/Dockerfile
+    ports:
+        - 1433:1433
+    environment:
+        - ACCEPT_EULA=Y
+        - SA_PASSWORD=passWord@123
+  movieservice:
+    image: webapi
+    container_name: Movie_Service
+    environment:
+      - DB_HOST=movieDB
+      - DB_NAME=MovieService_DB
+      - DB_SA_PASSWORD=passWord@123
+    build:
+      context: .
+      dockerfile: MovieService/Dockerfile
+    ports:
+        - 8080:80
+    depends_on:
+        - movieDB

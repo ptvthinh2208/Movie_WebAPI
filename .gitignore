@@ -12,3 +12,9 @@
 /MovieService/MovieService.Infrastructure/bin/Debug/net6.0
 /MovieService/MovieService.Business/obj
 /MovieService/MovieService.Business/bin/Debug/net6.0
+/MovieService/obj/Docker
+/MovieService/bin/Debug
+/MovieService/Movie Services/DatabaseBak/obj/Docker
+/MovieService/Movie Services/obj/Docker
+/MovieService/MovieService/Database_Bak/obj/Docker
+/MovieService/obj/Debug
