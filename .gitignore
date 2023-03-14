@@ -18,3 +18,6 @@
 /MovieService/Movie Services/obj/Docker
 /MovieService/MovieService/Database_Bak/obj/Docker
 /MovieService/obj/Debug
+/MovieService.API_Gateway/obj/Debug/net6.0
+/MovieService.API_Gateway/obj
+/MovieService.API_Gateway/bin/Debug/net6.0
