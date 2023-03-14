@@ -2,15 +2,6 @@
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 
-/Movie Services/bin/Debug
-/Movie Services/Movie Services/bin/Debug/net6.0
 /.vs
-/Movie Services/.vs
-/Movie Services/Movie Services/obj
-/Movie Services/MovieService.Business/bin/Debug/net6.0
-/Movie Services/MovieService.Business/obj
-/Movie Services/MovieService.Domain/bin/Debug/net6.0
-/Movie Services/MovieService.Domain/obj
-/Movie Services/MovieService.Infrastructure/bin/Debug/net6.0
-/Movie Services/MovieService.Infrastructure/obj
-/Movie Services/obj/Debug
+/MovieService/.vs
+/MovieService/MovieService/obj
