@@ -7,6 +7,7 @@ using MovieService.Domain.Actor;
 using MovieService.Domain.Country;
 using MovieService.Domain.Director;
 using MovieService.Domain.Genre;
+using MovieService.Domain.Movie;
 using MovieService.Infrastructure;
 using MovieService.Infrastructure.EF;
 using MovieService.Infrastructure.Repositories;
@@ -21,6 +22,7 @@ builder.Services.AddDbContext<MovieContext>(options =>
 // Add services to the container.
 
 builder.Services.AddTransient<IUnitOfWork, UnitOfWork>();
+builder.Services.AddScoped<IMovieService, MoviesService>();
 
 builder.Services.AddScoped<IPropertyService<Actor, ActorDto>, PropertyActorService>();
 builder.Services.AddScoped<IPropertyService<Country, CountryDto>, PropertyCountryService>();
@@ -32,6 +34,7 @@ builder.Services.AddScoped<IPropertyRepository<Actor>, ActorRepository>();
 builder.Services.AddScoped<IPropertyRepository<Country>, CountryRepository>();
 builder.Services.AddScoped<IPropertyRepository<Director>, DirectorRepository>();
 builder.Services.AddScoped<IPropertyRepository<Genre>, GenreRepository>();
+builder.Services.AddScoped<IPropertyRepository<Movie>, MovieRepository>();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
