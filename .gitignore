@@ -5,3 +5,4 @@
 /.vs
 /MovieService/.vs
 /MovieService/MovieService/obj
+/MovieService/MovieService.Domain/obj
