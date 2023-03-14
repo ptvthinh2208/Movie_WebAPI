@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MovieService.Domain", "Movi
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MovieService.Infrastructure", "MovieService.Infrastructure\MovieService.Infrastructure.csproj", "{5ABC1F0D-D778-4D2C-8FB1-1CC242779F8E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieService.Business", "MovieService.Business\MovieService.Business.csproj", "{68C16DC4-4F6B-445A-9AEC-68CA0DC4027D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MovieService.Business", "MovieService.Business\MovieService.Business.csproj", "{68C16DC4-4F6B-445A-9AEC-68CA0DC4027D}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{296F03A1-31C7-4017-97E7-603AE7A7DBD6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{68C16DC4-4F6B-445A-9AEC-68CA0DC4027D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{68C16DC4-4F6B-445A-9AEC-68CA0DC4027D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{68C16DC4-4F6B-445A-9AEC-68CA0DC4027D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{296F03A1-31C7-4017-97E7-603AE7A7DBD6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{296F03A1-31C7-4017-97E7-603AE7A7DBD6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{296F03A1-31C7-4017-97E7-603AE7A7DBD6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{296F03A1-31C7-4017-97E7-603AE7A7DBD6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

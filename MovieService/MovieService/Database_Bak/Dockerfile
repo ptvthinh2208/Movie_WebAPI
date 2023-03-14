@@ -7,5 +7,5 @@ ENV MSSQL_TCP_PORT=1433
         
 WORKDIR /src
         
-COPY MovieService.Business/Bak/MovieService.bak /dbbackups/
+COPY MovieService/Database_Bak/MovieServiceDB.bak /dbbackups/
 
