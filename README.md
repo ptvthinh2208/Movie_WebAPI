@@ -21,7 +21,7 @@ To restore a database in Linux container, please doing step by step:
 5> Run the command '/opt/mssql-tools/bin/sqlcmd -U sa -P passWord@123' to connect Sql Server and use sqlcmd               
 ![image](https://user-images.githubusercontent.com/126745003/225194733-2b7ce3e8-4f6f-4bae-83ac-34b3f19bf941.png)                      
 6> Run the command                                                                                                    
-1>RESTORE DATABASE MovieServiceDB FROM DISK ="/var/opt/mssql/data/MovieServiceDB.bak" WITH MOVE "MovieServiceDB" TO "/var/opt/mssql/data/MovieServiceDB.ldf", MOVE "MovieServiceDB_log" TO "/var/opt/mssql/data/MovieServiceDB_log.ldf"
+1>RESTORE DATABASE MovieServiceDB FROM DISK ="/var/opt/mssql/data/MovieServiceDB.bak" WITH MOVE "MovieServiceDB" TO "/var/opt/mssql/data/MovieServiceDB.ldf", MOVE "MovieServiceDB_log" TO "/var/opt/mssql/data/MovieServiceDB_log.ldf"                                                              
 2>GO
 ![image](https://user-images.githubusercontent.com/126745003/225195072-48cbb00f-03ce-43af-a63a-0b8e95e48885.png)
  
