@@ -1,7 +1,7 @@
 # Movie_WebAPI: How to run API locally?
 To run the API locally, please doing step by step:                                                                                 
 1> Open terminal in VS and use command 'docker-comopose build' like bellow 
-![image](https://user-images.githubusercontent.com/126745003/225191708-d44dd24d-c5c6-439e-aa8e-c71e86ae4127.png)
+![image](https://user-images.githubusercontent.com/126745003/225191708-d44dd24d-c5c6-439e-aa8e-c71e86ae4127.png)                
 2> When build complete, open Docker-Desktop you can see two images created from Dockerfile inside project
 ![image](https://user-images.githubusercontent.com/126745003/225192445-72ca49ae-aae7-4690-b482-184e89ff474b.png)
 3> Now, back to terminal in VS and use command 'docker-compose up' to build Containers from two images created before
