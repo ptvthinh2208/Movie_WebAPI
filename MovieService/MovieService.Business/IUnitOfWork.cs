@@ -18,7 +18,7 @@ namespace MovieService.Business
         IPropertyRepository<Country> CountryRepository { get; }
         IPropertyRepository<Director> DirectorRepository { get; }
         IPropertyRepository<Genre> GenreRepository { get; }
-        IPropertyRepository<Movie> MovieRepository { get; }
+        IMovieRepository MovieRepository { get; }
         void Save();
     }
 }

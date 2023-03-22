@@ -26,13 +26,13 @@ namespace MovieService.Infrastructure
         private IPropertyRepository<Country> _countryRepository;
         private IPropertyRepository<Director> _directorRepository;
         private IPropertyRepository<Genre> _genreRepository;
-        private IPropertyRepository<Movie> _movieRepository;
+        private IMovieRepository _movieRepository;
 
         public IPropertyRepository<Actor> ActorRepository => _actorRepository = new ActorRepository(_movieContext);
         public IPropertyRepository<Country> CountryRepository => _countryRepository = new CountryRepository(_movieContext);
         public IPropertyRepository<Director> DirectorRepository => _directorRepository = new DirectorRepository(_movieContext);
         public IPropertyRepository<Genre> GenreRepository => _genreRepository = new GenreRepository(_movieContext);
-        public IPropertyRepository<Movie> MovieRepository => _movieRepository = new MovieRepository(_movieContext);
+        public IMovieRepository MovieRepository => _movieRepository = new MovieRepository(_movieContext);
 
         public void Save()
         {
