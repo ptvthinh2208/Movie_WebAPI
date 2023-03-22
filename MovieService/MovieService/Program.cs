@@ -34,7 +34,7 @@ builder.Services.AddScoped<IPropertyRepository<Actor>, ActorRepository>();
 builder.Services.AddScoped<IPropertyRepository<Country>, CountryRepository>();
 builder.Services.AddScoped<IPropertyRepository<Director>, DirectorRepository>();
 builder.Services.AddScoped<IPropertyRepository<Genre>, GenreRepository>();
-builder.Services.AddScoped<IPropertyRepository<Movie>, MovieRepository>();
+builder.Services.AddScoped<IMovieRepository, MovieRepository>();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
