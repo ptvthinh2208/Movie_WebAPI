@@ -9,9 +9,7 @@ namespace MovieService.Domain.Movie
     public interface IMovieRepository
     {
         Task<Movie> GetByName(string name);
-        Task<IEnumerable<Movie>> GetByNames(string[] names);
         Task<IEnumerable<Movie>> Get();
-        Task<Movie> Get(string id);
         Task<Movie> Get(int id);
         Task Create(Movie entity);
         void Update(Movie entity);
