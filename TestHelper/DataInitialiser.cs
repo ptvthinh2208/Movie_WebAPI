@@ -11,7 +11,6 @@ using MovieService.Domain.Genre;
 using MovieService.Domain.Movie;
 using MovieService.Infrastructure;
 using MovieService.Infrastructure.EF;
-using TestHelper.Libraries;
 
 namespace TestHelper
 {
