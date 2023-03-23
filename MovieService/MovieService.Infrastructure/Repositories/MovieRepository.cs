@@ -25,19 +25,9 @@ namespace MovieService.Infrastructure.Repositories
         {
             return await _movieContext.Movie.FirstOrDefaultAsync(a => a.MovieName == name);
         }
-
-        public async Task<IEnumerable<Movie>> GetByNames(string[] names)
+        public async Task<Movie> Get(int movieId)
         {
-            return await _movieContext.Movie.Where(a => names.Any(n => n == a.MovieName))
-                .ToArrayAsync();
-        }
-        public async Task<Movie> Get(string id)
-        {
-            return await _movieContext.Movie.FindAsync(id);
-        }
-        public async Task<Movie> Get(int id)
-        {
-            return await _movieContext.Movie.FindAsync(id);
+            return await _movieContext.Movie.FirstOrDefaultAsync(f => f.MovieId == movieId);
         }
         public async Task Create(Movie entity)
         {

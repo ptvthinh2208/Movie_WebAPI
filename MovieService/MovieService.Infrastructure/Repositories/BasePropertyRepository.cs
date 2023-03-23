@@ -23,14 +23,9 @@ namespace MovieService.Infrastructure.Repositories
             return await _movieContext.Set<T>().ToArrayAsync();
         }
 
-        public async Task<T> Get(string id)
+        public virtual Task<T> GetById(int id)
         {
-            return await _movieContext.Set<T>().FindAsync(id);
-        }
-
-        public async Task<T> Get(int id)
-        {
-            return await _movieContext.Set<T>().FindAsync(id);
+            throw new NotImplementedException();
         }
 
         public async Task Create(T entity)
@@ -53,9 +48,6 @@ namespace MovieService.Infrastructure.Repositories
             throw new NotImplementedException();
         }
 
-        public virtual Task<IEnumerable<T>> GetByNames(string[] names)
-        {
-            throw new NotImplementedException();
-        }
+        
     }
 }

@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using MovieService.Domain.Actor;
 using MovieService.Domain.Country;
 using MovieService.Infrastructure.EF;
 using System;
@@ -21,9 +22,9 @@ namespace MovieService.Infrastructure.Repositories
             return await _movieContext.Country.FirstOrDefaultAsync(x => x.CountryName == name);
         }
 
-        public virtual async Task<IEnumerable<Country>> GetByNames(string[] names)
+        public override async Task<Country> GetById(int id)
         {
-            return await _movieContext.Country.Where(a => names.Any(x => x == a.CountryName)).ToArrayAsync();
+            return await _movieContext.Country.FirstOrDefaultAsync(a => a.CountryId == id);
         }
     }
 }

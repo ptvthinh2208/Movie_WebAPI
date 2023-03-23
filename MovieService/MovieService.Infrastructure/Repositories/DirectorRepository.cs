@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using MovieService.Domain.Actor;
 using MovieService.Domain.Director;
 using MovieService.Infrastructure.EF;
 using System;
@@ -23,10 +24,9 @@ namespace MovieService.Infrastructure.Repositories
             return await _movieContext.Director.FirstOrDefaultAsync(x => x.DirectorName == name);
         }
 
-        public override async Task<IEnumerable<Director>> GetByNames(string[] names)
+        public override async Task<Director> GetById(int id)
         {
-            return await _movieContext.Director.Where(a => names.Any(n => n == a.DirectorName))
-                .ToArrayAsync();
+            return await _movieContext.Director.FirstOrDefaultAsync(a => a.DirectorId == id);
         }
     }
 }
