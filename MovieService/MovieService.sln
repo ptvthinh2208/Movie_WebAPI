@@ -19,6 +19,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MovieService.Test", "MovieS
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestHelper", "..\TestHelper\TestHelper.csproj", "{1942405E-F888-437F-AD75-345863DE7E82}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieService.Test.API", "..\MovieService.Test.API\MovieService.Test.API.csproj", "{06C207C8-10FE-4C5E-BA19-277FD88EDC34}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -53,12 +55,17 @@ Global
 		{1942405E-F888-437F-AD75-345863DE7E82}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1942405E-F888-437F-AD75-345863DE7E82}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1942405E-F888-437F-AD75-345863DE7E82}.Release|Any CPU.Build.0 = Release|Any CPU
+		{06C207C8-10FE-4C5E-BA19-277FD88EDC34}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06C207C8-10FE-4C5E-BA19-277FD88EDC34}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06C207C8-10FE-4C5E-BA19-277FD88EDC34}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06C207C8-10FE-4C5E-BA19-277FD88EDC34}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{1942405E-F888-437F-AD75-345863DE7E82} = {34943BBA-AC92-4DD5-B846-3A0326A9EE91}
+		{06C207C8-10FE-4C5E-BA19-277FD88EDC34} = {34943BBA-AC92-4DD5-B846-3A0326A9EE91}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1DD2970E-2BE0-486A-A0B8-0A8B0F22B13A}
