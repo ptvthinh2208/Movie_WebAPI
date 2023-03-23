@@ -21,3 +21,7 @@
 /MovieService.API_Gateway/obj/Debug/net6.0
 /MovieService.API_Gateway/obj
 /MovieService.API_Gateway/bin/Debug/net6.0
+/TestHelper/obj
+/MovieService.Test.API/bin/Debug/net6.0
+/MovieService.Test.API/obj
+/TestHelper/bin/Debug/net6.0

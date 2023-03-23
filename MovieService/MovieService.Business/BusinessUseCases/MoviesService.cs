@@ -51,12 +51,12 @@ namespace MovieService.Business.BusinessUseCases
                 return null;
             }
             var movie = await _unitOfWork.MovieRepository.Get(id);
-            var actor = await _unitOfWork.ActorRepository.Get(movie.ActorId);
-            var director = await _unitOfWork.DirectorRepository.Get(movie.DirectorId);
-            var country = await _unitOfWork.CountryRepository.Get(movie.DirectorId);
-            var genre = await _unitOfWork.GenreRepository.Get(movie.DirectorId);
             if (movie != null)
             {
+                var actor = await _unitOfWork.ActorRepository.GetById(movie.ActorId);
+                var director = await _unitOfWork.DirectorRepository.GetById(movie.DirectorId);
+                var country = await _unitOfWork.CountryRepository.GetById(movie.CountryId);
+                var genre = await _unitOfWork.GenreRepository.GetById(movie.GenreId);
                 return new MovieDto()
                 {
                     MovieId = movie.MovieId,
