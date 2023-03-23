@@ -1,4 +1,7 @@
 ﻿using Castle.Components.DictionaryAdapter;
+using Microsoft.EntityFrameworkCore;
+using Moq;
+using Moq.EntityFrameworkCore;
 using MovieService.Business.BusinessUseCases;
 using MovieService.Controllers;
 using MovieService.Domain.Actor;
@@ -8,6 +11,7 @@ using MovieService.Domain.Genre;
 using MovieService.Domain.Movie;
 using MovieService.Infrastructure;
 using MovieService.Infrastructure.EF;
+using TestHelper.Libraries;
 
 namespace TestHelper
 {
@@ -137,7 +141,7 @@ namespace TestHelper
                 Title = "Parasite (2019)",
                 Date = 2019,
                 Time = 134,
-                ActorId = 4,
+                ActorId = 5,
                 CountryId = 2,
                 DirectorId = 4,
                 GenreId = 2
@@ -203,6 +207,16 @@ namespace TestHelper
                             _genreSource.FirstOrDefault(s => s.GenreId == movie.GenreId);
                     }
 
+                    var contextOption = new DbContextOptions<MovieContext>();
+                    var movieMockContext = new Mock<MovieContext>(contextOption);
+
+                    movieMockContext.Setup(c => c.Movie).ReturnsDbSet(_movieSource);
+                    movieMockContext.Setup(c => c.Actor).ReturnsDbSet(_actorSource);
+                    movieMockContext.Setup(c => c.Country).ReturnsDbSet(_countrySource);
+                    movieMockContext.Setup(c => c.Director).ReturnsDbSet(_directorSource);
+                    movieMockContext.Setup(c => c.Genre).ReturnsDbSet(_genreSource);
+
+                    _movieContext = movieMockContext.Object;
                 }
                 return _movieContext;
             }
