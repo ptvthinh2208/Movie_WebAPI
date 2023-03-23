@@ -42,13 +42,10 @@ namespace MovieService.Business.BusinessUseCases
         public async Task<TDto> GetById(string strId)
         {
             T entity = null;
-            if (typeof(T) == typeof(Genre))
+            
+            if (Int32.TryParse(strId, out var id))
             {
-                entity = await _propertyRepository.Get(strId);
-            }
-            else if (Int32.TryParse(strId, out var id))
-            {
-                entity = await _propertyRepository.Get(id);
+                entity = await _propertyRepository.GetById(id);
             }
 
             return entity == null ? null : MapToDto(entity);
@@ -90,7 +87,7 @@ namespace MovieService.Business.BusinessUseCases
         {
             try
             {
-                var existEntity = await _propertyRepository.Get(id);
+                var existEntity = await _propertyRepository.GetById(id);
                 if (existEntity == null)
                 {
                     return new ReturnResult()
@@ -138,7 +135,7 @@ namespace MovieService.Business.BusinessUseCases
 
                 if (Int32.TryParse(strId, out var id))
                 {
-                    existEntity = await _propertyRepository.Get(id);
+                    existEntity = await _propertyRepository.GetById(id);
                 }
                 if (existEntity == null)
                 {
